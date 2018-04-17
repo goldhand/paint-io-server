@@ -32,7 +32,7 @@ const config = {
   ],
 };
 
-let paintIOPath;
+let paintIOPath = '';
 // use the github package
 if (fsExists('../paint-io-client')) {
   paintIOPath = '../paint-io-client';
