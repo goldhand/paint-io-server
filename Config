@@ -12,25 +12,54 @@ package.NodeJS-paint-io-server = {
         network-access = blocked;
     };
 
-    # Use NoOpBuild. See https://w.amazon.com/index.php/BrazilBuildSystem/NoOpBuild
-    build-system = no-op;
+    build-system = happy-npm-shrinkwrap;
     build-tools = {
         1.0 = {
-            NoOpBuild = 1.0;
+            HappyNpmShrinkwrap = 1.0;
+            NodeJS = 8.x;
         };
     };
 
-    # Use runtime-dependencies for when you want to bring in additional
-    # packages when deploying.
-    # Use dependencies instead if you intend for these dependencies to
-    # be exported to other packages that build against you.
     dependencies = {
         1.0 = {
+            NodeJS-ApolloEnvironmentInfo = 1.0;
+            NodeJS-express = 4.15.x;
+            NodeJS-socket_io = 1.7.x;
         };
     };
 
     runtime-dependencies = {
         1.0 = {
+            NodeJS = 8.x;
+            MinimalProcessManager = 1.1;
+        };
+    };
+
+    test-dependencies = {
+        1.0 = {
+            NodeJS-paint-io-client = 1.0;
+            NodeJS-babel-code-frame = 6.26.x; # is not implicitly imported in apollo env
+            NodeJS-babel-cli = 6.26.x;
+            NodeJS-babel-eslint = 7.2.x;
+            NodeJS-babel-loader = 7.1.x;
+            NodeJS-babel-preset-env = 1.6.x;
+            NodeJS-babel-preset-stage-0 = 6.24.x;
+            NodeJS-css-loader = 0.28.x;
+            NodeJS-eslint = 4.10.x;
+            NodeJS-html-webpack-plugin = 2.26.x;
+            NodeJS-nodemon = 1.10.x;
+            NodeJS-socket_io = 1.7.x;
+            NodeJS-socket_io-client = 1.7.x;
+            NodeJS-style-loader = 0.20.x;
+            NodeJS-webpack = 3.8.x;
+            NodeJS-webpack-dev-middleware = 1.10.x;
+        };
+    };
+
+    resolves-conflict-dependencies = {
+        1.0 = {
+            NodeJS = 8.x;
+            Openssl = 1.0.x;
         };
     };
 
