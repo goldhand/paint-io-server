@@ -2,9 +2,15 @@
 Paint app server for the websockets workshop
 
 ## Getting Started
+
+### Local
 ```
 $ npm install
 $ npm run watch
+```
+### Apollo
+```
+bb watch
 ```
 
 ## Workshop
@@ -28,15 +34,52 @@ After running these, your *workspace* directory should look like:
 ./paint-io-client/
 ./paint-io-server/
 ```
+or
+```
+.
+./NodeJS-paint-io-client/
+./NodeJS-paint-io-server/
+```
+
+If you used brazil to pull the packages down, add a remote url pointing to your's and your teammate's github remote so that you can collaborate using your teammates fork.
+Example adding a remote "teammemer1" pointing to my teammember's fork:
+```
+$ git remote add teammember1 https://github.com/teammember1/paint-io-client.git
+```
+Then you can pull your teammate's changes down:
+```
+$ git pull teammate1 mainline
+```
+Verify this by running:
+```
+$ git remote -v
+```
+And you should see something similar to:
+```
+origin	ssh://git.amazon.com/pkg/NodeJS-paint-io-server (fetch)
+origin	ssh://git.amazon.com/pkg/NodeJS-paint-io-server (push)
+teammate1	https://github.com/teammate1/paint-io-server (fetch)
+teammate1	https://github.com/teammate1/paint-io-server (push)
+```
+Of course, replace "teammember1" with your teammate's github alias.
+
 
 Install dependencies in each package (from within each package directory).
 ```
 $ npm install
 ```
+or
+```
+$ bb release
+```
 
 Run the server from within `./paint-io-server`
 ```
 $ npm run watch
+```
+or
+```
+$ bb watch
 ```
 
 Inline instructions can be found in the `src/socket.js`. Each task is marked by as `TODO x.x [description]`.
