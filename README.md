@@ -2,88 +2,33 @@
 Paint app server for the websockets workshop
 
 ## Getting Started
-
-### Local
 ```
 $ npm install
-$ npm run watch
-```
-### Apollo
-```
-bb watch
+$ npm start
 ```
 
 ## Workshop
-`*` this github repository because its nice to do.
+⭐️ this github repository because it will help the needy.
 
-One team member should fork [`paint-io-client`] and the other should fork [`paint-io-server`]. Then clone each others repositories into your *workspace* directory (replace *teammember* with the correct user alias).
-```
-$ git clone https://github.com/teammember1/paint-io-client.git
-$ git clone https://github.com/teammember2/paint-io-server.git
-```
+ifconfig | grep "inet " | grep -v 127.0.0.1 | cut -d\  -f2
 
-If you are working alone, you can just clone both [`paint-io-client`] and [`paint-io-server`] into the same *workspace* directory.
+One team member should clone [`paint-io-client`] and the other should clone [`paint-io-server`].
+
 ```
 $ git clone https://github.com/goldhand/paint-io-client.git
+```
+or
+```
 $ git clone https://github.com/goldhand/paint-io-server.git
-```
-
-After running these, your *workspace* directory should look like:
-```
-.
-./paint-io-client/
-./paint-io-server/
-```
-or
-```
-.
-./NodeJS-paint-io-client/
-./NodeJS-paint-io-server/
-```
-
-If you used brazil to pull the packages down, add a remote url pointing to your's and your teammate's github remote so that you can collaborate using your teammates fork.
-Example adding a remote "teammemer1" pointing to my teammember's fork:
-```
-$ git remote add teammember1 https://github.com/teammember1/paint-io-client.git
-```
-Then you can pull your teammate's changes down:
-```
-$ git pull teammate1 mainline
-```
-Verify this by running:
-```
-$ git remote -v
-```
-And you should see something similar to:
-```
-origin	ssh://git.amazon.com/pkg/NodeJS-paint-io-server (fetch)
-origin	ssh://git.amazon.com/pkg/NodeJS-paint-io-server (push)
-teammate1	https://github.com/teammate1/paint-io-server (fetch)
-teammate1	https://github.com/teammate1/paint-io-server (push)
-```
-Of course, replace "teammember1" with your teammate's github alias.
-
-
-Install dependencies in each package (from within each package directory).
-```
-$ npm install
-```
-or
-```
-$ bb release
-```
-
-Run the server from within `./paint-io-server`
-```
-$ npm run watch
-```
-or
-```
-$ bb watch
 ```
 
 Inline instructions can be found in the `src/socket.js`. Each task is marked by as `TODO x.x [description]`.
 You should not need to make any changes outside of the `src/socket.js`.
+
+### What's my network ip?
+```
+$ ifconfig | grep "inet " | grep -v 127.0.0.1 | cut -d\  -f2
+```
 
 ## Steps (with goals)
 1. Make the paint application collaborative using socket.io

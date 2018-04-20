@@ -4,10 +4,11 @@
   "description": "Server package for the websockets workshop",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "npm run watch",
     "watch": "nodemon server.js",
+    "server": "node server.js",
     "build": "webpack -p",
-    "release": "npm run build && mkdir -p ./build/lib/commonjs/$npm_package_name/ && cp -r dist ./build/lib/commonjs/$npm_package_name/ && cp package.json ./build/lib/commonjs/$npm_package_name/package.json"
+    "release": "mkdir -p ./build/lib/commonjs/$npm_package_name/ && cp -r src ./build/lib/commonjs/$npm_package_name/ && cp package.json ./build/lib/commonjs/$npm_package_name/package.json && cp server.js ./build/lib/commonjs/$npm_package_name/server.js"
   },
   "repository": {
     "type": "git",
