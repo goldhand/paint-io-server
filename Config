@@ -37,22 +37,15 @@ package.NodeJS-paint-io-server = {
 
     test-dependencies = {
         1.0 = {
-            NodeJS-paint-io-client = 1.0;
             NodeJS-babel-code-frame = 6.26.x; # is not implicitly imported in apollo env
             NodeJS-babel-cli = 6.26.x;
             NodeJS-babel-eslint = 7.2.x;
-            NodeJS-babel-loader = 7.1.x;
             NodeJS-babel-preset-env = 1.6.x;
             NodeJS-babel-preset-stage-0 = 6.24.x;
-            NodeJS-css-loader = 0.28.x;
             NodeJS-eslint = 4.10.x;
-            NodeJS-html-webpack-plugin = 2.26.x;
             NodeJS-nodemon = 1.10.x;
             NodeJS-socket_io = 1.7.x;
             NodeJS-socket_io-client = 1.7.x;
-            NodeJS-style-loader = 0.20.x;
-            NodeJS-webpack = 3.8.x;
-            NodeJS-webpack-dev-middleware = 1.10.x;
         };
     };
 
